@@ -39,10 +39,7 @@ class OutOfBoundsEx {
 template <class T>
 class MyList {
   public:
-    MyList() {
-      head = tail = new Node;
-      head->next = NULL;
-    }
+    MyList();
 
     // toArray
     // append
@@ -54,8 +51,17 @@ class MyList {
       Node *next;
       T data;
     }
-    int count;
+    int length;
     Node *head;
     Node *tail;
     T *a; 
+}
+
+
+template <class T>
+Mylist<T>::MyList() 
+{
+  head = tail = new Node;
+  head->next = NULL;
+  length = 0;
 }
